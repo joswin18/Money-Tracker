@@ -17,8 +17,15 @@ function App() {
           Add New Transaction
         </button>
       </form>
-      <div className='transaction'>
-        
+      <div className='transactions'>
+          <div className='Transaction'>
+            <div className="left">
+              <div className="name">new Samsung tv</div>
+            </div>
+            <div className="right">
+
+            </div>
+          </div>
       </div>
     </main>
   );
