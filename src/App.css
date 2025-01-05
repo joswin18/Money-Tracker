@@ -68,6 +68,9 @@ form button:hover {
   background-color:darkgray;
 }
 
+
+
+/* Transaction Styles */
 .transactions {
   margin-top: 20px;
 }
@@ -75,45 +78,88 @@ form button:hover {
 .transaction {
   display: flex;
   justify-content: space-between;
-  padding: 12px;
-  margin-bottom: 10px;
-  background: #2b343e;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin-bottom: 12px;
+  background: rgb(89, 89, 89);
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .transaction:hover {
-  transform: translateY(-5px);
-  background-color: #353f4d;
+  transform: translateY(-8px);
+  background-color: rgb(63, 63, 63);
 }
 
-.transaction .left,
-.transaction .right {
+.transaction .left {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .transaction .left .name {
-  font-size: 1.1rem;
-  font-weight: bold;
+  font-size: 1.3rem;
+  font-weight: 600;
   color: #fff;
+  margin-bottom: 5px;
 }
 
 .transaction .left .description {
-  font-size: 0.8rem;
-  color: #888;
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 8px;
+}
+
+.transaction .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .transaction .right .price {
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 1.4rem;
+  font-weight: 700;
   color: #56ccf2;
-  text-align: right;
+  margin-bottom: 4px;
 }
 
 .transaction .right .datetime {
+  font-size: 0.85rem;
+  color: #bbb;
+}
+
+/* Adding icons to the transactions */
+.transaction .left .name:before {
+  content: '💳'; /* Icon example */
+  margin-right: 8px;
+  font-size: 1.5rem;
+  color: #56ccf2;
+}
+
+/* Date & time Styling */
+.transaction .right .datetime {
   font-size: 0.9rem;
   color: #bbb;
-  text-align: right;
+  font-style: italic;
+}
+
+.transaction .right .price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f39c12;
+}
+
+/* Responsive */
+@media screen and (max-width: 400px) {
+  .transaction {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .transaction .left,
+  .transaction .right {
+    align-items: center;
+    text-align: center;
+  }
 }
