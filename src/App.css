@@ -144,10 +144,16 @@ form button:hover {
   font-style: italic;
 }
 
-.transaction .right .price {
+.transaction .right .price.green {
   font-size: 1.2rem;
   font-weight: 700;
   color: #ff5a35;
+}
+
+.transaction .right .price.red {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #7efe96;
 }
 
 /* Responsive */
