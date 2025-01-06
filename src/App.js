@@ -24,7 +24,17 @@ function App() {
           <div class="description">Time to upgrade my living room setup!</div>
         </div>
         <div class="right">
-          <div class="price">$500</div>
+          <div class="price">-$500</div>
+          <div class="datetime">2025-01-05</div>
+        </div>
+      </div>
+      <div class="transaction">
+        <div class="left">
+          <div class="name">Phone</div>
+          <div class="description">Bought new phone</div>
+        </div>
+        <div class="right">
+          <div class="price">-$900</div>
           <div class="datetime">2025-01-05</div>
         </div>
       </div>

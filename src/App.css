@@ -145,9 +145,9 @@ form button:hover {
 }
 
 .transaction .right .price {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  color: #f39c12;
+  color: #ff5a35;
 }
 
 /* Responsive */
