@@ -1,7 +1,8 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  // const [first, setfirst] = useState(second)
   return (
     <main>
       <h1>$400<span>.00</span></h1>
