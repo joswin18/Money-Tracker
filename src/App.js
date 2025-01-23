@@ -25,7 +25,7 @@ function App() {
           <div class="description">Time to upgrade my living room setup!</div>
         </div>
         <div class="right">
-          <div class="price green">-$500</div>
+          <div class="price red">-$500</div>
           <div class="datetime">2025-01-05</div>
         </div>
       </div>
@@ -35,7 +35,7 @@ function App() {
           <div class="description">Bought new phone</div>
         </div>
         <div class="right">
-          <div class="price red">+$900</div>
+          <div class="price green">+$900</div>
           <div class="datetime">2025-01-05</div>
         </div>
       </div>
