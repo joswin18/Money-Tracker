@@ -1,17 +1,53 @@
 // import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+// require('dotenv').config();
 
 function App() {
-  // const [first, setfirst] = useState(second)
+  const [name, setName] = useState('');
+  const [datetime,setDateTime] = useState('')
+  const [description,setDescription] = useState('')
+  function addNewtransaction(ev){
+    ev.preventDefault()
+    const url = process.env.REACT_APP_API_URL+'/transaction'
+    // console.log(url)
+    fetch(url, {
+      method: 'POST',
+      headers: {'Content-type': 'application/json'},
+      body: JSON.stringify({name, description, datetime})
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(json => {
+      console.log('result', json);
+    })
+    .catch(error => {
+      console.error('Fetch error:', error);
+    });
+  }
+
   return (
     <main>
       <h1>$400<span>.00</span></h1>
-      <form>
+      <form onSubmit={addNewtransaction}>
         <div>
-        <input type='text'placeholder={'laptop'}/>
-        <input type='datetime-local'/>
+        <input type='text' 
+        value={name}
+        onChange={ev => setName(ev.target.value)}
+        placeholder={'laptop'}/>
+        <input 
+        value={datetime} 
+        onChange={ev =>setDateTime(ev.target.value)}
+        type='datetime-local'/>
         </div>
-        <div className='description'>
+        <div 
+        value={description} 
+        onChange={ev =>setDescription(ev.target.value)}
+        className='description'> 
         <input type='text' placeholder={'description'}/>
         </div>
         <button type='submit'>
